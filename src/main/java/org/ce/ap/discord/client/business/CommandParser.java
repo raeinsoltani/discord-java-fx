@@ -35,9 +35,9 @@ public class CommandParser implements InitializingBean {
 
     private static final Logger LOGGER = Logger.getLogger(CommandParser.class.getName());
 
-    private ClientNetworkServiceManagement networkService;
-    private DisplayService displayService;
-    private Person loginUser;
+    public static ClientNetworkServiceManagement networkService;
+    public static DisplayService displayService;
+    public static Person loginUser;
 
     @Override
     public void afterPropertiesSet(ApplicationContext context) {
@@ -48,8 +48,8 @@ public class CommandParser implements InitializingBean {
     public void start() throws IOException {
         LOGGER.info("Command Parser Starting");
         networkService.initialize();
-        displayService.printMainMenu();
-        parseCommand();
+//        displayService.printMainMenu();
+//        parseCommand();
     }
 
     private void parseCommand() {

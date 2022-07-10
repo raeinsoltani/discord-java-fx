@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.ce.ap.discord.client.business.CommandParser;
 import org.ce.ap.discord.client.business.network.ClientNetworkServiceManagement;
 
 import java.io.IOException;
@@ -16,8 +17,6 @@ import java.io.IOException;
 import static org.ce.ap.discord.common.boot.Bootstrapper.LOGGER;
 
 public class SignupController {
-
-    private ClientNetworkServiceManagement networkService;
 
     private Stage stage;
 
@@ -45,7 +44,7 @@ public class SignupController {
 
     @FXML
     void RegisterButton(ActionEvent event) throws IOException {
-        Object response = networkService.register(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText(),
+        Object response = CommandParser.networkService.register(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText(),
                 emailTextField.getText(), phoneNumberTextField.getText());
         if (response instanceof String) {
             LOGGER.error("Registering failed because {}", String.valueOf(response));

@@ -5,9 +5,9 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.ce.ap.discord.client.boot.ClientBootStrapper;
+import org.ce.ap.discord.client.business.CommandParser;
 import org.ce.ap.discord.client.business.display.DisplayService;
 import org.ce.ap.discord.client.business.network.ClientNetworkServiceManagement;
 import org.ce.ap.discord.common.boot.Bootstrapper;
@@ -34,8 +34,8 @@ public class MainLauncher extends Application {
         bootstrapper.initialize(bootstrapProperties);
         bootstrapper.initializingPostProcessor();
         ApplicationContext applicationContext = ApplicationContext.getInstance();
-        GUIParser guiParser = (GUIParser) applicationContext.getApplicationBeans().get(GUIParser.class);
-        guiParser.start();
+        CommandParser commandParser = (CommandParser) applicationContext.getApplicationBeans().get(CommandParser.class);
+        commandParser.start();
 
         primaryStageObj = stage;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/LoginOrSignup.fxml"));
