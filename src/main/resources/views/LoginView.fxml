@@ -32,8 +32,8 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="username" textAlignment="CENTER" wrappingWidth="83.7366943359375" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="password" textAlignment="CENTER" wrappingWidth="82.13671875" GridPane.rowIndex="1" />
-            <TextField fx:id="usernameTextfield" GridPane.columnIndex="1" />
-            <TextField fx:id="passwordTextfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Button layoutX="227.0" layoutY="429.0" mnemonicParsing="false" onAction="#Login" text="Login" />
