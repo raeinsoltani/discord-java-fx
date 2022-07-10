@@ -221,7 +221,6 @@ public class CommandParser implements InitializingBean {
         String text = sc.nextLine();
         DiscordMessage<String> message = new DiscordMessage(loginUser, text);
         networkService.sendChannelMessages(serverId, categoryId, channelId, message);
-
     }
 
     private void sendChannelFileMessage(String serverId, String categoryId, String channelId, Scanner sc) {
