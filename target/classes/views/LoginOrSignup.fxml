@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.LoginOrSignupController">
+   <children>
+      <Text layoutX="159.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to our messaging  project" textAlignment="CENTER" wrappingWidth="282.93678283691406">
+         <font>
+            <Font name="System Italic" size="33.0" />
+         </font>
+      </Text>
+      <Button layoutX="312.0" layoutY="339.0" mnemonicParsing="false" onAction="#SignupButton" text="Signup" />
+      <Button layoutX="246.0" layoutY="339.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="54.0" text="Login" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/IMessage_logo_(Apple_Inc.).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="221.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by raein and alireza" textAlignment="CENTER" wrappingWidth="158.93675231933594" />
+   </children>
+</AnchorPane>
