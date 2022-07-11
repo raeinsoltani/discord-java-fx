@@ -21,12 +21,6 @@ public class MainLauncher extends Application {
 
     private static Stage primaryStageObj;
 
-    public static ClientNetworkServiceManagement networkService;
-
-    public static DisplayService displayService;
-
-    public static Person loginUser;
-
     @Override
     public void start(Stage stage) throws Exception {
         Bootstrapper bootstrapper = new ClientBootStrapper("DiscordClient");

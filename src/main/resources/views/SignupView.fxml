@@ -46,5 +46,6 @@
       </GridPane>
       <Button layoutX="290.0" layoutY="485.0" mnemonicParsing="false" onAction="#RegisterButton" text="Register" />
       <Text fx:id="errorText" fill="#cf5050" layoutX="159.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="314.13665771484375" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" text="Back" />
    </children>
 </AnchorPane>

@@ -2,14 +2,27 @@ package controller.company;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import org.ce.ap.discord.client.business.CommandParser;
 import org.ce.ap.discord.common.entity.business.Person;
+
+import java.io.IOException;
 
 import static org.ce.ap.discord.common.boot.Bootstrapper.LOGGER;
 
 public class LoginController {
+
+    private Stage stage;
+
+    private Scene scene;
+
+    private Parent root;
 
     @FXML
     private Text errorText;
@@ -32,5 +45,16 @@ public class LoginController {
             errorText.setText(String.valueOf(response));
         }
     }
+
+    @FXML
+    void Back(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/LoginOrSignup.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Welcome to our Application!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

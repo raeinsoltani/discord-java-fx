@@ -10,17 +10,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="475.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.LoginController">
    <children>
-      <ImageView fitHeight="131.0" fitWidth="130.0" layoutX="174.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="131.0" fitWidth="130.0" layoutX="174.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/IMessage_logo_(Apple_Inc.).png" />
+            <Image url="@../images/png-transparent-user-profile-default.png" />
          </image>
       </ImageView>
-      <Text layoutX="191.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="95.7366943359375" />
+      <Text layoutX="191.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="95.7366943359375" />
       <Text fx:id="errorText" fill="#b93737" layoutX="120.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="238.13671875" />
-      <GridPane gridLinesVisible="true" layoutX="120.0" layoutY="199.0" prefHeight="214.0" prefWidth="266.0">
+      <GridPane gridLinesVisible="true" layoutX="120.0" layoutY="196.0" prefHeight="218.0" prefWidth="238.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.20001220703125" minWidth="10.0" prefWidth="99.4000244140625" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.5999755859375" minWidth="10.0" prefWidth="166.5999755859375" />
@@ -32,10 +31,11 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="username" textAlignment="CENTER" wrappingWidth="83.7366943359375" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="password" textAlignment="CENTER" wrappingWidth="82.13671875" GridPane.rowIndex="1" />
-            <TextField fx:id="usernameTextfield" GridPane.columnIndex="1" />
-            <TextField fx:id="passwordTextfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Button layoutX="227.0" layoutY="429.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <Button layoutX="215.0" layoutY="435.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#Back" text="Back" />
    </children>
 </AnchorPane>

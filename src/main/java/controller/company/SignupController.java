@@ -71,4 +71,15 @@ public class SignupController {
         }
     }
 
+    @FXML
+    void Back(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/LoginOrSignup.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Welcome to our Application!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 }
