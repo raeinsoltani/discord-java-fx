@@ -48,8 +48,8 @@ public class CommandParser implements InitializingBean {
     public void start() throws IOException {
         LOGGER.info("Command Parser Starting");
         networkService.initialize();
-//        displayService.printMainMenu();
-//        parseCommand();
+        displayService.printMainMenu();
+        parseCommand();
     }
 
     private void parseCommand() {
