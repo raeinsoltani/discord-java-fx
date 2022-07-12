@@ -66,6 +66,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\boot\Bootstrapper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\privateChat\PrivateChatController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\RemoveChannelRequestDto.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\ShowFriendsController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\wrapper\impl\AuthenticationServiceWrapperImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\ClientApplicationLoader.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\ChangePhotoResponseDto.java
@@ -131,7 +132,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\enumeration\UserStatus.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\wrapper\ChatManagementServiceWrapper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\channel\DiscordChannel.java
-C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\sendFriendsRequestController.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\SendFriendsRequestController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\SendFriendRequestResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\business\display\entity\MainMenu.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\BlockRequestDto.java

@@ -1,0 +1,32 @@
+package controller.company.friends;
+
+import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
+import org.ce.ap.discord.common.entity.business.Person;
+
+public class ShowFriendsController {
+
+    @FXML
+    private Text emailText;
+
+    @FXML
+    private Text phoneNumberText;
+
+    @FXML
+    private ImageView profilePicture;
+
+    @FXML
+    private Text statusText;
+
+    @FXML
+    private Text usernameText;
+
+    public void setContactInfo(Person person){
+        usernameText.setText(person.getId());
+//        statusText.setText();
+        phoneNumberText.setText(person.getPhoneNumber());
+//        emailText.setText(person.getEmail());
+    }
+
+}
