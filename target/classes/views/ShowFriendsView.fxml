@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,7 +19,7 @@
             <Image url="@../images/png-transparent-user-profile-default.png" />
          </image>
       </ImageView>
-      <Text fx:id="usernameText" fill="#f6fff7" layoutX="208.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+      <Text fx:id="usernameText" fill="#f6fff7" layoutX="117.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER" wrappingWidth="374.23748779296875">
          <font>
             <Font name="Arial Bold" size="40.0" />
          </font>
@@ -33,20 +34,29 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
-      <Text fx:id="phoneNumberText" fill="WHITE" layoutX="222.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phoneNumber" textAlignment="CENTER" wrappingWidth="164.47320556640625">
+      <Text fx:id="phoneNumberText" fill="WHITE" layoutX="222.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phoneNumber" textAlignment="CENTER" wrappingWidth="164.47320556640625">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
-      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="413.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="188.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/email.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="413.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="188.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/phoneCall.png" />
          </image>
       </ImageView>
+      <Button layoutX="410.0" layoutY="63.0" mnemonicParsing="false" onAction="#block" prefHeight="73.0" prefWidth="114.0" styleClass="transparent-background" stylesheets="@../style/style.css">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/block.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

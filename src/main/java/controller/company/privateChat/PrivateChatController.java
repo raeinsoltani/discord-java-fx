@@ -3,16 +3,35 @@ package controller.company.privateChat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import org.ce.ap.discord.client.business.CommandParser;
+import org.ce.ap.discord.common.entity.business.discord.PrivateChat;
 
 import java.io.IOException;
+import java.net.NetworkInterface;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class PrivateChatController {
+import static org.ce.ap.discord.common.boot.Bootstrapper.LOGGER;
+
+public class PrivateChatController implements Initializable {
 
     private Stage stage;
 
@@ -20,6 +39,14 @@ public class PrivateChatController {
 
     private Parent root;
 
+    @FXML
+    private ScrollPane ScrollPaneFriends;
+
+    @FXML
+    private ScrollPane chatScrollPane;
+
+    @FXML
+    private VBox chatVBox;
 
     @FXML
     private Button friends;
@@ -28,7 +55,77 @@ public class PrivateChatController {
     private ImageView settings;
 
     @FXML
+    private TextField textField;
+
+    @FXML
     private ImageView userProfileImage;
+
+    @FXML
+    private VBox vBoxFriends;
+
+    private String currentContactPersonID;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if (CommandParser.loginUser == null) {
+            LOGGER.error("Login first");
+            return;
+        }
+        List<PrivateChat> response = (List<PrivateChat>) CommandParser.networkService.getPrivateChats(CommandParser.loginUser.getId());
+        if(response != null){
+            for (int i = 0; i < response.size(); i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/ChatSelectBox.fxml"));
+                try {
+                    AnchorPane anchorPane = fxmlLoader.load();
+                    ChatSelectBoxController chatSelectBoxController = fxmlLoader.getController();
+                    chatSelectBoxController.addValue(response.get(i).getId(), response.get(i).getPerson1().getId(), response.get(i).getPerson2().getId());
+                    vBoxFriends.getChildren().add(anchorPane);
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        }
+    }
+
+    @FXML
+    void sendButton(ActionEvent event) {
+        String messageToSend = textField.getText();
+        if(!messageToSend.isEmpty() && currentContactPersonID != null){
+            HBox hBox = new HBox();
+            hBox.setAlignment(Pos.CENTER_RIGHT);
+            hBox.setPadding(new Insets(5, 5, 5, 5));
+
+            Text text = new Text(messageToSend);
+            TextFlow textFlow = new TextFlow(text);
+
+            textFlow.setStyle("-fx-color: rgb(239,242,255) -fx-background;" +
+                    "-fx-background-color: rgb(15,125,242);" +
+                    "-fx-background-radius: 20px;");
+
+            textFlow.setPadding(new Insets(5,10,5,10));
+            text.setFill(Color.color(0.934, 0.945, 0.996);
+
+            hBox.getChildren().add(textFlow);
+            chatVBox.getChildren().add(hBox);
+
+            CommandParser.networkService.sendTextMessage(CommandParser.loginUser, CommandParser.loginUser.getId(), currentContactPersonID, messageToSend);
+            textField.clear();
+        }
+    }
+
+
+    @FXML
+    void privateChat(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/PrivateChatView.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Private Chat");
+
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     void GroupChat(ActionEvent event) {
@@ -38,7 +135,7 @@ public class PrivateChatController {
     @FXML
     void friendsList(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("views/FriendsView.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Friends List");
         stage.setScene(scene);
@@ -46,13 +143,7 @@ public class PrivateChatController {
     }
 
     @FXML
-    void privateChat(ActionEvent event) {
-
-    }
-
-    @FXML
     void settings(ActionEvent event) {
 
     }
-
 }
