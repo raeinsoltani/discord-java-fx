@@ -87,7 +87,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#ReviewFriendRequest" prefHeight="102.0" prefWidth="197.0" styleClass="transparent-background" stylesheets="@../style/style.css" text="    Review Requests" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#ReviewFriendRequest" prefHeight="102.0" prefWidth="197.0" styleClass="transparent-background" stylesheets="@../style/style.css" text=" Review Requests" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -103,7 +103,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#showFriends" prefHeight="98.0" prefWidth="194.0" styleClass="transparent-background" stylesheets="@../style/style.css" text="          Show Friends" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#showFriends" prefHeight="98.0" prefWidth="194.0" styleClass="transparent-background" stylesheets="@../style/style.css" text="    Show Friends" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
@@ -111,6 +111,22 @@
                               <ImageView fitHeight="58.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/Google_Contacts_icon.svg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#blockedContacts" prefHeight="117.0" prefWidth="219.0" styleClass="transparent-background" stylesheets="@../style/style.css" text="Blocked Contacts" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/block.png" />
                                  </image>
                               </ImageView>
                            </graphic>
