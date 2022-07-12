@@ -1,1 +1,9 @@
+controller\company\authentication\LoginController.class
+controller\company\friends\ReviewRequestsController.class
+controller\company\friends\FriendsController.class
+controller\company\friends\sendFriendsRequestController.class
+controller\company\friends\FriendsController$1.class
+controller\company\authentication\LoginOrSignupController.class
 controller\company\GUIParser.class
+controller\company\privateChat\PrivateChatController.class
+controller\company\authentication\SignupController.class

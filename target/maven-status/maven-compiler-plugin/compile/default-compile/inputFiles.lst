@@ -4,6 +4,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\util\io\ObjectIOHelper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\PrivateChat.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\authentication\LogoutRequestDto.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\authentication\LoginController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\SelectChannelRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\exceptions\WrongPasswordException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\MainLauncher.java
@@ -20,7 +21,6 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\serv
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\exceptions\ChatExistsException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\ChannelAdditionResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\FileMessage.java
-C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\LoginOrSignupController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\GetBlockListRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\GetFriendListRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\network\ClientHandler.java
@@ -30,7 +30,6 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\serv
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\RejectFriendRequestResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\GetServersListResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\impl\UserManagementServiceImpl.java
-C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\LoginController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\channel\VoiceChannel.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\exceptions\UsernameNotFoundException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\AcceptFriendRequestResponseDto.java
@@ -41,6 +40,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\ServerInformation.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\exceptions\AlreadyBlockedException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\wrapper\impl\ChatManagementServiceWrapperImpl.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\authentication\SignupController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\authentication\LoginResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\UnblockResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\ServerAdditionRequestDto.java
@@ -64,6 +64,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\GetServerMembersResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\util\io\ClassPathLoader.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\boot\Bootstrapper.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\privateChat\PrivateChatController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\RemoveChannelRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\wrapper\impl\AuthenticationServiceWrapperImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\ClientApplicationLoader.java
@@ -71,6 +72,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\business\network\impl\ClientNetworkServiceManagementImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\exceptions\IdNotUnique.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\impl\ServerManagementServiceImpl.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\authentication\LoginOrSignupController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\GetServerChannelsRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\RenameServerRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\exceptions\NotBlockedException.java
@@ -118,6 +120,8 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\serv
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\impl\AuthenticationServiceImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\Category.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\enumeration\ChannelType.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\FriendsController.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\ReviewRequestsController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\GetPrivateChatsResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\GetServerMembersRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\enumeration\HeaderType.java
@@ -127,6 +131,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\enumeration\UserStatus.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\wrapper\ChatManagementServiceWrapper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\channel\DiscordChannel.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\sendFriendsRequestController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\SendFriendRequestResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\business\display\entity\MainMenu.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\BlockRequestDto.java
@@ -138,7 +143,6 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\comm
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\wrapper\ServerManagementServiceWrapper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\business\network\entity\DiscordClientInfo.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\ChangePhotoRequestDto.java
-C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\SignupController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\exceptions\BlockedException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\AcceptFriendRequestRequestDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\UpdatePersonResponseDto.java

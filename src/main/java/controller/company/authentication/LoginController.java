@@ -1,4 +1,4 @@
-package controller.company;
+package controller.company.authentication;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,12 +34,17 @@ public class LoginController {
     private TextField usernameTextField;
 
     @FXML
-    void Login(ActionEvent event) {
+    void Login(ActionEvent event) throws IOException {
         Object response = CommandParser.networkService.login(usernameTextField.getText(), passwordTextField.getText());
         if (response instanceof Person) {
             LOGGER.info("Logged in :{}", response.toString());
             CommandParser.loginUser = (Person) response;
-
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("views/PrivateChatView.fxml"));
+            stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setTitle("Private Chat");
+            stage.setScene(scene);
+            stage.show();
         } else {
             LOGGER.error("Logging failed because {}", String.valueOf(response));
             errorText.setText(String.valueOf(response));

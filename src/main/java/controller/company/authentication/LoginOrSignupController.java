@@ -1,4 +1,4 @@
-package controller.company;
+package controller.company.authentication;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
