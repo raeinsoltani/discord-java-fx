@@ -44,6 +44,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\aut
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\authentication\LoginResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\UnblockResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\server\ServerAdditionRequestDto.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\privateChat\ChatSelectBoxController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\impl\ChatManagementServiceImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\exceptions\FriendRequestNotFoundException.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\user\UpdatePersonRequestDto.java
@@ -136,6 +137,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\fri
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\SendFriendRequestResponseDto.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\client\business\display\entity\MainMenu.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\BlockRequestDto.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\friends\BlockedContactsController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\util\ToStringHelper.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\UserManagementService.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\api\dto\chat\UnblockRequestDto.java

@@ -1,5 +1,7 @@
 package controller.company.privateChat;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,10 +23,10 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import org.ce.ap.discord.client.business.CommandParser;
+import org.ce.ap.discord.common.entity.business.discord.DiscordMessage;
 import org.ce.ap.discord.common.entity.business.discord.PrivateChat;
 
 import java.io.IOException;
-import java.net.NetworkInterface;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -63,7 +65,7 @@ public class PrivateChatController implements Initializable {
     @FXML
     private VBox vBoxFriends;
 
-    private String currentContactPersonID;
+    public static String currentContactPersonID;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -87,6 +89,21 @@ public class PrivateChatController implements Initializable {
 
             }
         }
+
+        vBoxFriends.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                ScrollPaneFriends.setVvalue((double) newValue);
+            }
+        });
+
+        chatVBox.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                chatScrollPane.setVvalue((double) newValue);
+            }
+        });
+
     }
 
     @FXML
@@ -100,18 +117,65 @@ public class PrivateChatController implements Initializable {
             Text text = new Text(messageToSend);
             TextFlow textFlow = new TextFlow(text);
 
-            textFlow.setStyle("-fx-color: rgb(239,242,255) -fx-background;" +
+            textFlow.setStyle("-fx-color: rgb(239,242,255);" +
                     "-fx-background-color: rgb(15,125,242);" +
                     "-fx-background-radius: 20px;");
 
             textFlow.setPadding(new Insets(5,10,5,10));
-            text.setFill(Color.color(0.934, 0.945, 0.996);
+            text.setFill(Color.color(0.934, 0.945, 0.996));
 
             hBox.getChildren().add(textFlow);
             chatVBox.getChildren().add(hBox);
 
             CommandParser.networkService.sendTextMessage(CommandParser.loginUser, CommandParser.loginUser.getId(), currentContactPersonID, messageToSend);
             textField.clear();
+        }
+    }
+
+    @FXML
+    void clock(ActionEvent event) {
+        showOldMessages();
+    }
+
+    public void showOldMessages(){
+        chatVBox.getChildren().clear();
+        LOGGER.info("Showing Old messages");
+        List<DiscordMessage> messages = CommandParser.networkService.showMessages(CommandParser.loginUser.getId(), currentContactPersonID);
+        for (int i = 0; i < messages.size(); i++) {
+            if(messages.get(i).getSender().getId().equals(CommandParser.loginUser.getId())){
+                HBox hBox = new HBox();
+                hBox.setAlignment(Pos.CENTER_RIGHT);
+                hBox.setPadding(new Insets(5, 5, 5, 5));
+
+                Text text = new Text((String) messages.get(i).getBody());
+                TextFlow textFlow = new TextFlow(text);
+
+                textFlow.setStyle("-fx-color: rgb(239,242,255);" +
+                        "-fx-background-color: rgb(15,125,242);" +
+                        "-fx-background-radius: 20px;");
+
+                textFlow.setPadding(new Insets(5,10,5,10));
+                text.setFill(Color.color(0.934, 0.945, 0.996));
+
+                hBox.getChildren().add(textFlow);
+                chatVBox.getChildren().add(hBox);
+            }
+            else {
+                HBox hBox = new HBox();
+                hBox.setAlignment(Pos.CENTER_LEFT);
+                hBox.setPadding(new Insets(5, 5, 5, 5));
+
+                Text text = new Text((String) messages.get(i).getBody());
+                TextFlow textFlow = new TextFlow(text);
+
+                textFlow.setStyle("-fx-background-color: rgb(233,233,235);" +
+                        "-fx-background-radius: 20px;");
+
+                textFlow.setPadding(new Insets(5,10,5,10));
+
+                hBox.getChildren().add(textFlow);
+                chatVBox.getChildren().add(hBox);
+            }
         }
     }
 
