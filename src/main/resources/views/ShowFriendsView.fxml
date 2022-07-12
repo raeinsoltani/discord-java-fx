@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="550.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.friends.ShowFriendsController">
+   <styleClass>
+      <String fx:value="radius" />
+      <String fx:value="light-blue-background" />
+   </styleClass>
+   <children>
+      <ImageView fx:id="profilePicture" fitHeight="94.0" fitWidth="124.0" layoutX="27.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png-transparent-user-profile-default.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="usernameText" fill="#f6fff7" layoutX="117.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER" wrappingWidth="374.23748779296875">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text fx:id="statusText" fill="WHITE" layoutX="191.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="227.73675537109375">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="emailText" fill="WHITE" layoutX="198.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email" textAlignment="CENTER" wrappingWidth="211.73675537109375">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="phoneNumberText" fill="WHITE" layoutX="222.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phoneNumber" textAlignment="CENTER" wrappingWidth="164.47320556640625">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="409.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="413.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phoneCall.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
