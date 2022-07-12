@@ -52,7 +52,7 @@ public class SignupController {
         }
         else{
             LOGGER.info("Registered : {}", response.toString());
-            errorText.setStyle("-fx-text-fill: green; -fx-font-size: 12px;");
+            errorText.setStyle("-fx-text-fill: #32FF0E; -fx-font-size: 12px;");
             errorText.setText("Registered, now please login!");
             try
             {
