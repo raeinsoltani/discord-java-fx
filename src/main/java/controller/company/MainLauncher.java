@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.ce.ap.discord.client.boot.ClientBootStrapper;
 import org.ce.ap.discord.client.business.CommandParser;
@@ -35,7 +36,7 @@ public class MainLauncher extends Application {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/LoginOrSignup.fxml"));
         stage.setTitle("Welcome to our Application!");
         stage.setResizable(false);
-//        stage.getIcons().add(new Image("main/java/resources/images/Discord-logo.png"));
+        stage.getIcons().add(new Image("/images/IMessage_logo_(Apple_Inc.).png"));
         Scene scene = new Scene(root, 600, 400);
         scene.setRoot(root);
         stage.setScene(scene);

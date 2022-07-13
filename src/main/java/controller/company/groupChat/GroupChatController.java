@@ -198,8 +198,13 @@ public class GroupChatController implements Initializable {
     }
 
     @FXML
-    void friendsList(ActionEvent event) {
-
+    void friendsList(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/FriendsView.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Friends List");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

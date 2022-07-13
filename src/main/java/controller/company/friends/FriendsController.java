@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -80,7 +79,7 @@ public class FriendsController {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("views/SendFriendRequestView.fxml"));
         Stage stage = new Stage();
         stage.setTitle("Send Friend Request");
-//        stage.getIcons().add(new Image("resources/sendMessage@"));
+        stage.getIcons().add(new Image("/images/sendMessage1.png"));
         stage.setScene(new Scene(root, 407, 76));
         stage.setResizable(false);
         stage.show();
@@ -182,7 +181,6 @@ public class FriendsController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Private Chat");
-
         stage.setScene(scene);
         stage.show();
     }
