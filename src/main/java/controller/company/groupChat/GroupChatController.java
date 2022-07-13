@@ -6,12 +6,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import org.ce.ap.discord.client.business.CommandParser;
 import org.ce.ap.discord.common.entity.business.discord.Category;
 
@@ -23,6 +28,12 @@ import java.util.ResourceBundle;
 import static org.ce.ap.discord.common.boot.Bootstrapper.LOGGER;
 
 public class GroupChatController implements Initializable {
+
+    private Stage stage;
+
+    private Scene scene;
+
+    private Parent root;
 
     @FXML
     private ScrollPane ScrollPaneServers;
@@ -192,13 +203,24 @@ public class GroupChatController implements Initializable {
     }
 
     @FXML
-    void groupChatSettings(ActionEvent event) {
-
+    void groupChatSettings(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/ServerSettingsView.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Server Settings Management");
+        stage.getIcons().add(new Image("/images/Settings.png"));
+        stage.setScene(new Scene(root, 479, 475));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    void privateChat(ActionEvent event) {
-
+    void privateChat(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/PrivateChatView.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Private Chat");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -207,7 +229,18 @@ public class GroupChatController implements Initializable {
     }
 
     @FXML
-    void settings(ActionEvent event) {
+    void settings(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/ServerSettingsView.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Server Settings Management");
+        stage.getIcons().add(new Image("/images/Settings.png"));
+        stage.setScene(new Scene(root, 479, 475));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    void profilePicture(ActionEvent event) {
 
     }
 

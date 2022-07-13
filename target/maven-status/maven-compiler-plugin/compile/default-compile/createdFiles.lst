@@ -1,6 +1,10 @@
+controller\company\groupChat\GroupChatController$2.class
 controller\company\authentication\LoginController.class
+controller\company\groupChat\GroupSelectController.class
 controller\company\friends\FriendsController.class
 controller\company\friends\FriendsController$3.class
+controller\company\groupChat\ServerSettingsController.class
+controller\company\groupChat\GroupChatController$3.class
 controller\company\friends\FriendsController$2.class
 controller\company\friends\FriendsController$1.class
 controller\company\privateChat\PrivateChatController.class
@@ -8,9 +12,12 @@ controller\company\privateChat\ChatSelectBoxController.class
 controller\company\friends\ReviewRequestsController.class
 controller\company\friends\SendFriendsRequestController.class
 controller\company\friends\BlockedContactsController.class
+controller\company\groupChat\ChannelSelectController.class
 controller\company\friends\ShowFriendsController.class
 controller\company\authentication\LoginOrSignupController.class
+controller\company\groupChat\GroupChatController.class
 controller\company\GUIParser.class
+controller\company\groupChat\GroupChatController$1.class
 controller\company\privateChat\PrivateChatController$2.class
 controller\company\privateChat\PrivateChatController$1.class
 controller\company\authentication\SignupController.class

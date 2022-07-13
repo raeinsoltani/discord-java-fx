@@ -6,28 +6,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="60.0" prefWidth="160.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.privateChat.ChatSelectBoxController">
+<AnchorPane prefHeight="100.0" prefWidth="160.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.privateChat.ChatSelectBoxController">
    <styleClass>
       <String fx:value="radius" />
       <String fx:value="dark-gray-background" />
    </styleClass>
    <children>
-      <Text fx:id="ChatID" fill="WHITE" layoutX="19.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChatID" textAlignment="CENTER" wrappingWidth="120.53668212890625">
+      <Text fx:id="ChatID" fill="WHITE" layoutX="25.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChatID" textAlignment="CENTER" wrappingWidth="120.53668212890625">
          <font>
-            <Font name="Arial Black" size="5.0" />
+            <Font name="Arial Black" size="1.0" />
          </font>
       </Text>
-      <Text fx:id="Person1" fill="WHITE" layoutX="33.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person1" textAlignment="CENTER" wrappingWidth="91.73675537109375">
+      <Text fx:id="Person1" fill="WHITE" layoutX="17.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person1" textAlignment="CENTER" wrappingWidth="133.336669921875">
          <font>
-            <Font name="Arial" size="9.0" />
+            <Font name="Arial Bold Italic" size="13.0" />
          </font>
       </Text>
-      <Text fx:id="Person2" fill="WHITE" layoutX="18.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person2" textAlignment="CENTER" wrappingWidth="120.53668212890625">
+      <Text fx:id="Person2" fill="WHITE" layoutX="12.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person2" textAlignment="CENTER" wrappingWidth="144.5367431640625">
          <font>
-            <Font name="Arial" size="9.0" />
+            <Font name="Arial Bold Italic" size="13.0" />
          </font>
       </Text>
-      <Button layoutX="19.0" layoutY="6.0" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="121.0" styleClass="transparent-background" stylesheets="@../style/style.css" textFill="WHITE">
+      <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClick" prefHeight="91.0" prefWidth="151.0" styleClass="transparent-background" stylesheets="@../style/style.css" textFill="WHITE">
          <font>
             <Font size="5.0" />
          </font></Button>

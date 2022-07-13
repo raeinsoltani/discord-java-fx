@@ -17,7 +17,7 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="98.0" spacing="20.0" styleClass="dark-gray-background" stylesheets="@../style/style.css">
                <children>
-                  <Button mnemonicParsing="false" styleClass="transparent-background" stylesheets="@../style/style.css">
+                  <Button mnemonicParsing="false" onAction="#profilePicture" styleClass="transparent-background" stylesheets="@../style/style.css">
                      <graphic>
                         <ImageView fx:id="userProfileImage" fitHeight="61.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>

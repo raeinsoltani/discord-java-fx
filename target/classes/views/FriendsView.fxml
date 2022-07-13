@@ -16,7 +16,7 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="98.0" spacing="20.0" styleClass="dark-gray-background" stylesheets="@../style/style.css">
                <children>
-                  <Button mnemonicParsing="false" styleClass="transparent-background" stylesheets="@../style/style.css">
+                  <Button mnemonicParsing="false" onAction="#ProfilePicture" styleClass="transparent-background" stylesheets="@../style/style.css">
                      <graphic>
                         <ImageView fx:id="userProfileImage" fitHeight="61.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -38,7 +38,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="GroupChat" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@../style/style.css">
+                  <Button mnemonicParsing="false" onAction="#GroupChat" styleClass="transparent-background" stylesheets="@../style/style.css">
                      <graphic>
                         <ImageView fitHeight="82.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -47,7 +47,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="friends" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@../style/style.css">
+                  <Button mnemonicParsing="false" onAction="#friends" styleClass="transparent-background" stylesheets="@../style/style.css">
                      <graphic>
                         <ImageView fitHeight="105.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -56,12 +56,14 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <ImageView fx:id="settings" fitHeight="59.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/Settings.png" />
-                     </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" styleClass="transparent-background" stylesheets="@../style/style.css" />
+                  <Button mnemonicParsing="false" onAction="#settings" styleClass="transparent-background" stylesheets="@../style/style.css">
+                     <graphic>
+                        <ImageView fitHeight="59.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
                <HBox.margin>
                   <Insets />

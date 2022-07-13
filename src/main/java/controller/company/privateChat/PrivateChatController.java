@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -192,8 +193,13 @@ public class PrivateChatController implements Initializable {
     }
 
     @FXML
-    void GroupChat(ActionEvent event) {
-
+    void GroupChat(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/GroupChatView.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Group Chat");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -207,7 +213,18 @@ public class PrivateChatController implements Initializable {
     }
 
     @FXML
-    void settings(ActionEvent event) {
+    void settings(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/ServerSettingsView.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Server Settings Management");
+        stage.getIcons().add(new Image("/images/Settings.png"));
+        stage.setScene(new Scene(root, 479, 475));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    void profilePicture(ActionEvent event) {
 
     }
 }
