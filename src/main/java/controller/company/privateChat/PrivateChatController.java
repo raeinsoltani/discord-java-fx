@@ -224,7 +224,28 @@ public class PrivateChatController implements Initializable {
     }
 
     @FXML
-    void profilePicture(ActionEvent event) {
+    void profilePicture(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/ProfileView.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("User Profile");
+        stage.getIcons().add(new Image("/images/png-transparent-user-profile-default.png"));
+        stage.setScene(new Scene(root, 182, 468));
+        stage.setResizable(false);
+        stage.show();
 
     }
+
+    @FXML
+    void logout(ActionEvent event) throws IOException {
+        if(CommandParser.loginUser != null){
+            CommandParser.networkService.logOut(CommandParser.loginUser);
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("views/LoginOrSignup.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setTitle("Welcome to our Application!");
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
+
 }

@@ -21,3 +21,4 @@ controller\company\groupChat\GroupChatController$1.class
 controller\company\privateChat\PrivateChatController$2.class
 controller\company\privateChat\PrivateChatController$1.class
 controller\company\authentication\SignupController.class
+controller\company\profile\ProfileController.class

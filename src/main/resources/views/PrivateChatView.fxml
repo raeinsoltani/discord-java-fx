@@ -65,6 +65,15 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
+                  <Button mnemonicParsing="false" onAction="#logout" styleClass="transparent-background" stylesheets="@../style/style.css">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cross.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
                <HBox.margin>
                   <Insets />

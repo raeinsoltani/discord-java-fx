@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -11,9 +12,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="475.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.groupChat.ServerSettingsController">
+<AnchorPane prefHeight="475.0" prefWidth="479.0" styleClass="gray-background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.company.groupChat.ServerSettingsController">
    <children>
-      <Text layoutX="119.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Settings" textAlignment="CENTER" wrappingWidth="204.53675079345703">
+      <Text layoutX="105.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Settings" textAlignment="CENTER" wrappingWidth="204.53675079345703">
          <font>
             <Font name="Segoe Script" size="25.0" />
          </font>
@@ -32,31 +33,53 @@
         </rowConstraints>
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ServerID" wrappingWidth="56.5367431640625" />
-            <TextField fx:id="serverID" GridPane.columnIndex="1" />
+            <TextField fx:id="serverID" styleClass="radius" stylesheets="@../style/style.css" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ServerCat" wrappingWidth="59.7366943359375" GridPane.rowIndex="1" />
-            <TextField fx:id="serverCategory" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="serverCategory" styleClass="radius" stylesheets="@../style/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ChannelID" wrappingWidth="66.13671875" GridPane.rowIndex="2" />
-            <TextField fx:id="channelID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="channelID" styleClass="radius" stylesheets="@../style/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UserID" wrappingWidth="63.7366943359375" GridPane.rowIndex="3" />
-            <TextField fx:id="userID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="userID" styleClass="radius" stylesheets="@../style/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Extra" wrappingWidth="63.5218505859375" GridPane.rowIndex="4" />
-            <TextField fx:id="extra" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="extra" styleClass="radius" stylesheets="@../style/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button layoutX="27.0" layoutY="351.0" mnemonicParsing="false" onAction="#renameServer" text="Rename Server">
-         <graphic>
-            <ImageView fitHeight="34.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/RegisterButton.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Button layoutX="71.0" layoutY="372.0" mnemonicParsing="false" onAction="#renameServer" stylesheets="@../style/style.css" text="Rename Server">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="light-blue-background" />
+         </styleClass>
       </Button>
-      <Button layoutX="36.0" layoutY="415.0" mnemonicParsing="false" onAction="#addUser" text="Add User to Server" />
-      <Button layoutX="196.0" layoutY="360.0" mnemonicParsing="false" onAction="#addVoiceChannel" text="Add voice channel" />
-      <Button layoutX="200.0" layoutY="402.0" mnemonicParsing="false" onAction="#addTextChannel" text="Add text channel" />
-      <Button layoutX="324.0" layoutY="360.0" mnemonicParsing="false" onAction="#setRole" text="Set Role" />
-      <Button layoutX="328.0" layoutY="402.0" mnemonicParsing="false" onAction="#React" text="React" />
+      <Button layoutX="61.0" layoutY="415.0" mnemonicParsing="false" onAction="#addUser" stylesheets="@../style/style.css" text="Add User to Server">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="light-green-background" />
+         </styleClass></Button>
+      <Button layoutX="286.0" layoutY="372.0" mnemonicParsing="false" onAction="#addVoiceChannel" stylesheets="@../style/style.css" text="Add voice channel">
+         <styleClass>
+            <String fx:value="light-blue-background" />
+            <String fx:value="radius" />
+         </styleClass></Button>
+      <Button layoutX="290.0" layoutY="415.0" mnemonicParsing="false" onAction="#addTextChannel" stylesheets="@../style/style.css" text="Add text channel">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="light-green-background" />
+         </styleClass></Button>
+      <Button layoutX="201.0" layoutY="372.0" mnemonicParsing="false" onAction="#setRole" stylesheets="@../style/style.css" text="Set Role">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="light-green-background" />
+         </styleClass></Button>
+      <Button layoutX="208.0" layoutY="415.0" mnemonicParsing="false" onAction="#React" stylesheets="@../style/style.css" text="React">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="light-blue-background" />
+         </styleClass></Button>
       <Text fx:id="statusText" fill="#bc3333" layoutX="119.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="223.99999999999977" />
+      <ImageView fitHeight="40.0" fitWidth="57.0" layoutX="323.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Settings.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

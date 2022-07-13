@@ -245,7 +245,14 @@ public class GroupChatController implements Initializable {
     }
 
     @FXML
-    void profilePicture(ActionEvent event) {
+    void profilePicture(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("views/ProfileView.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("User Profile");
+        stage.getIcons().add(new Image("/images/png-transparent-user-profile-default.png"));
+        stage.setScene(new Scene(root, 182, 468));
+        stage.setResizable(false);
+        stage.show();
 
     }
 

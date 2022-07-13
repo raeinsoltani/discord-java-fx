@@ -122,6 +122,7 @@ C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\clie
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\network\entity\ClientHandlerStatus.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\groupChat\ServerSettingsController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\discord\wrapper\UserManagementServiceWrapper.java
+C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\controller\company\profile\ProfileController.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\network\entity\enumeration\ClientHandlerStatusType.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\server\business\authentication\impl\AuthenticationServiceImpl.java
 C:\Users\raeen\IdeaProjects\Java-Discord-FX\src\main\java\org\ce\ap\discord\common\entity\business\discord\Category.java
