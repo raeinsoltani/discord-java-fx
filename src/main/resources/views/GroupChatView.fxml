@@ -70,9 +70,9 @@
                   <Insets />
                </HBox.margin>
             </VBox>
-            <ScrollPane fx:id="ScrollPaneFriends" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+            <ScrollPane fx:id="ScrollPaneServers" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                <content>
-                  <VBox fx:id="vBoxFriends" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="193.0" spacing="10.0" styleClass="gray-background" stylesheets="@../style/style.css" />
+                  <VBox fx:id="vBoxServers" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="193.0" spacing="10.0" styleClass="gray-background" stylesheets="@../style/style.css" />
                </content>
             </ScrollPane>
          </children>
@@ -122,9 +122,14 @@
                   </Button>
                </children>
             </AnchorPane>
-            <ScrollPane fx:id="chatScrollPane" hbarPolicy="NEVER" layoutX="1.0" prefHeight="538.0" prefWidth="610.0">
+            <ScrollPane fx:id="chatScrollPane" hbarPolicy="NEVER" layoutX="1.0" prefHeight="538.0" prefWidth="438.0">
                <content>
-                  <VBox fx:id="chatVBox" alignment="BOTTOM_RIGHT" prefHeight="536.0" prefWidth="594.0" />
+                  <VBox fx:id="chatVBox" alignment="BOTTOM_RIGHT" prefHeight="536.0" prefWidth="436.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="channelScrollPane" hbarPolicy="NEVER" layoutX="441.0" prefHeight="538.0" prefWidth="170.0">
+               <content>
+                  <VBox fx:id="channelVBox" prefHeight="532.0" prefWidth="162.0" />
                </content>
             </ScrollPane>
          </children>

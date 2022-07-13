@@ -7,11 +7,14 @@ import javafx.scene.text.Text;
 public class GroupSelectController {
 
     @FXML
-    private Text Person1;
+    private Text serverID;
 
     @FXML
     void onClick(ActionEvent event) {
-
+        GroupChatController.currentServerID = serverID.getText();
     }
 
+    public void setServerID(String serverID){
+        this.serverID.setText(serverID);
+    }
 }
