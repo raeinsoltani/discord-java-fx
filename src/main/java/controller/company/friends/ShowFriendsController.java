@@ -30,7 +30,7 @@ public class ShowFriendsController {
         usernameText.setText(person.getId());
 //        statusText.setText();
         phoneNumberText.setText(person.getPhoneNumber());
-//        emailText.setText(person.getEmail());
+        emailText.setText(person.getEmail());
     }
 
     @FXML

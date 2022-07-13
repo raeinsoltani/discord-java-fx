@@ -113,4 +113,8 @@ public class Person implements Serializable {
     public Person clone() throws CloneNotSupportedException {
         return (Person) super.clone();
     }
+
+    public String getEmail() {
+        return email;
+    }
 }
